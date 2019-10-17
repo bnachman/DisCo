@@ -1,1 +1,6 @@
 # DisCo
+
+This notebook shows how to use [Distance Correlation](https://en.wikipedia.org/wiki/Distance_correlation) (DisCo) as a penalty term in the training of a neural network (using Keras + Tensorflow) to encourage the neural network output to be statistically independent from a given feature.  This is often used in high-energy physics for resonance searches (\"bump hunt\") when there is one special feature (often a mass of some sort) that is used to look for a localized feature on top of a smoothly falling background.  Other features are used to enhance any potential signals.  It is important for the background estimation that any requirements made on other non-mass features do not sculpt artificial bumps in the mass distribution.  Making the mass and the non-mass features (represented here by a single neural network) is sufficient for this purpose.  See [ATL-PHYS-PUB-2018-014](https://cds.cern.ch/record/2630973\
+) (and references therein and papers that cite it) for a nice review of decorrelation methods.
+
+This idea is based on work by David Shih and Gregor Kasieczka (see p71 [in this talk](https://indico.cern.ch/event/753914/contributions/3440387/attachments/1884206/3105265/Shih_BOOST2019.pdf)).
